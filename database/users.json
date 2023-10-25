@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Daniel Osei",
+    "username": "DOsei",
+    "email": "daniel@gmail.com",
+    "role": "Manager",
+    "password": "d1234567"
+  },
+  {
+    "name": "John Doe",
+    "username": "JDoe",
+    "email": "johndoe@gmail.com",
+    "role": "Customer",
+    "password": "d1234567"
+  },
+  {
+    "name": "Sarah Freeman",
+    "username": "Safman",
+    "email": "sarahfman@gmail.com",
+    "role": "Customer",
+    "password": "d1234567"
+  }
+]
