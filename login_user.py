@@ -1,11 +1,9 @@
 from database_setups import retrieve_from_database
 
+
 def login(username, password):
-      # Load existing users from JSON file (if it exists)
-    try:
-        Users = retrieve_from_database('users.json')
-    except FileNotFoundError:
-        pass
+
+    Users = retrieve_from_database('users.json')
 
     """function validates user
     """
