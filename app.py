@@ -3,6 +3,7 @@
 """
 
 from login_user import login
+from product import add_product, view_products
 
 display_message = """
 Welcome to Inventory Management Application
@@ -29,8 +30,10 @@ def manager_menu():
         if choice == '1':
             # View Inventory
             print("Viewing Inventory...")
+            view_products()
         elif choice == '2':
             # Add Item
+            add_product()
             print("Adding an item...")
         elif choice == '3':
             # Remove Item

@@ -10,13 +10,13 @@ def product_already_exists(product_list, name):
     return False
 
 
-def add_product():
-    Products = []
+def retrieve_products_from_database():
+    return retrieve_from_database('products.json')
 
-    try:
-        Products = retrieve_from_database('products.json')
-    except FileNotFoundError:
-        pass
+
+def add_product():
+
+    Products = retrieve_products_from_database()
 
     # sku = "prod-"+str(random_number)
     name = input("Enter product name: ")
@@ -48,16 +48,25 @@ def add_product():
     print("Product added.")
 
 
-while True:
-    print("Options:")
-    print("1. Add a new product")
-    print("2. Exit")
+def view_products():
+    products = retrieve_products_from_database()
 
-    choice = input("Enter your choice: ")
+    message = """
 
-    if choice == '1':
-        add_product()
-    elif choice == '2':
-        break
+    Below are the products available
+        
+    """
+    if products:
+
+        print(message)
+
+        for product in products:
+            print("SKU/ID:", product['sku'])
+            print("Name:", product['name'])
+            print("Shelf Life:", product['shelf_life'])
+            print("Volume:", product['volume'])
+            print("Quantity:", product['qty'])
+            print("Price:", product['price'])
+            print()
     else:
-        print("Invalid choice. Please try again.")
+        print("No products/items found in the database.")
