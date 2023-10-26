@@ -1,0 +1,34 @@
+[
+    {
+        "sku": "prod-94649",
+        "name": "Belaquao",
+        "shelf_life": "2036-04-06",
+        "volume": "100ml",
+        "qty": 600.0,
+        "price": 1000.0
+    },
+    {
+        "sku": "prod-72438",
+        "name": "Voltic",
+        "shelf_life": "2026-04-27",
+        "volume": "10ml",
+        "qty": 5.0,
+        "price": 800.0
+    },
+    {
+        "sku": "prod-17426",
+        "name": "Good Water",
+        "shelf_life": "2023-03-05",
+        "volume": "50ml",
+        "qty": 30.0,
+        "price": 450.0
+    },
+    {
+        "sku": "prod-23313",
+        "name": "Coca cola",
+        "shelf_life": "2024-25-15",
+        "volume": "100ml",
+        "qty": 60.0,
+        "price": 400.0
+    }
+]
