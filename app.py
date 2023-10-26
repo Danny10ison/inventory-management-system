@@ -4,6 +4,7 @@
 
 from login_user import login
 from product import add_product, view_products
+import getpass
 
 display_message = """
 Welcome to Inventory Management Application
@@ -57,7 +58,7 @@ while True:
 
     if choice == '1':
         username = input("Enter your username: ")
-        password = input("Enter your password: ")
+        password = getpass.getpass("Enter your password: ")
 
         logged_in_user = login(username, password)
         if logged_in_user:

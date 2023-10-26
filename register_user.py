@@ -1,4 +1,5 @@
 from database_setups import save_to_database, retrieve_from_database
+import getpass
 
 
 # A function check if user already register
@@ -21,7 +22,8 @@ def register_user_from_input(user_list):
         print("You are already registered, please login")
         return
 
-    password = input("Enter your password: ")
+    password = getpass.getpass("Enter your password: ")
+    # password = input
 
     # Only "Customer" can register for security reason, "Manager" will be added manually to the database (the json file)
     new_user = {
