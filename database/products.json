@@ -1,0 +1,18 @@
+[
+    {
+        "sku": "prod-94649",
+        "name": "Belaquao",
+        "shelf_life": "2036-04-06",
+        "volume": "100ml",
+        "qty": 600.0,
+        "price": 1000.0
+    },
+    {
+        "sku": "prod-72438",
+        "name": "Voltic",
+        "shelf_life": "2026-04-27",
+        "volume": "10ml",
+        "qty": 5.0,
+        "price": 800.0
+    }
+]
