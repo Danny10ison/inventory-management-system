@@ -1,5 +1,6 @@
 import random
 import bcrypt
+import string
 
 
 # Generate a random 5-digit number
@@ -18,3 +19,24 @@ def hash_password(password):
 # Function to verify a password during login
 def verify_password(entered_password, hashed_password):
     return bcrypt.checkpw(entered_password.encode('utf-8'), hashed_password.encode('utf-8'))
+
+
+def generate_strong_password(length=12):
+    # Define character sets for each category
+    lowercase_letters = string.ascii_lowercase
+    uppercase_letters = string.ascii_uppercase
+    digits = string.digits
+    special_characters = "!@#$%^&*()_-+=<>?/[]{}|"
+
+    # Combine all character sets
+    all_characters = lowercase_letters + \
+        uppercase_letters + digits + special_characters
+
+    # Ensure the password is at least 12 characters long
+    if length < 12:
+        length = 12
+
+    # Generate the password
+    password = ''.join(random.choice(all_characters) for _ in range(length))
+
+    return password
