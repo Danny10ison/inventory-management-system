@@ -5,7 +5,6 @@
 from login_user import login
 from product import add_product, view_products, view_single_product
 from request import request_for_a_product, approve_or_decline_a_request, view_requests
-import getpass
 
 display_message = """
 Welcome to Inventory Management Application
@@ -108,10 +107,7 @@ while True:
     choice = input("Enter your choice: ")
 
     if choice == '1':
-        username = input("Enter your username: ")
-        password = getpass.getpass("Enter your password: ")
-
-        logged_in_user = login(username, password)
+        logged_in_user = login()
         if logged_in_user:
             if logged_in_user['role'] == 'Manager':
                 print("Login successful. Welcome, {}! Your role is {}.".format(
@@ -122,7 +118,6 @@ while True:
                 print("Login successful. Welcome, {}! ".format(
                     logged_in_user['name']))
                 customer_menu(logged_in_user)  # Call the customer's menu
-
         else:
             print("Invalid username or password. Please try again.")
     elif choice == '0':
