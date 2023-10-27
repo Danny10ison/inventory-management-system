@@ -1,0 +1,20 @@
+[
+  {
+    "id": "req-80938",
+    "product": {
+      "sku": "prod-94649",
+      "name": "Belaquao",
+      "shelf_life": "2036-04-06",
+      "volume": "100ml",
+      "price": 1000.0
+    },
+    "qty_requested": 200,
+    "status": "approved",
+    "customer": {
+      "name": "Priscilla",
+      "username": "priscilla",
+      "email": "priscilla@gmail.com",
+      "role": "Customer"
+    }
+  }
+]
