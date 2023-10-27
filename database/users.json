@@ -1,30 +1,37 @@
 [
-  {
-    "name": "Daniel Osei",
-    "username": "DOsei",
-    "email": "daniel@gmail.com",
-    "role": "Manager",
-    "password": "d1234567"
-  },
-  {
-    "name": "John Doe",
-    "username": "JDoe",
-    "email": "johndoe@gmail.com",
-    "role": "Customer",
-    "password": "d1234567"
-  },
-  {
-    "name": "Sarah Freeman",
-    "username": "Safman",
-    "email": "sarahfman@gmail.com",
-    "role": "Customer",
-    "password": "d1234567"
-  },
-  {
-    "name": "Priscilla",
-    "username": "priscilla",
-    "email": "priscilla@gmail.com",
-    "password": "12345678",
-    "role": "Customer"
-  }
+    {
+        "name": "Daniel Osei",
+        "username": "DOsei",
+        "email": "daniel@gmail.com",
+        "password": "$2b$12$4mzOzNkbe5WCQ.K40A5b0OdD8m9uExEoSaElHuIZNg.LNTrevc6mK",
+        "role": "Manager"
+    },
+    {
+        "name": "John Doe",
+        "username": "JDoe",
+        "email": "johndoe@gmail.com",
+        "password": "$2b$12$4mzOzNkbe5WCQ.K40A5b0OdD8m9uExEoSaElHuIZNg.LNTrevc6mK",
+        "role": "Customer"
+    },
+    {
+        "name": "Sarah Freeman",
+        "username": "Safman",
+        "email": "sarahfman@gmail.com",
+        "password": "$2b$12$4mzOzNkbe5WCQ.K40A5b0OdD8m9uExEoSaElHuIZNg.LNTrevc6mK",
+        "role": "Customer"
+    },
+    {
+        "name": "Priscilla",
+        "username": "priscilla",
+        "email": "priscilla@gmail.com",
+        "password": "$2b$12$4mzOzNkbe5WCQ.K40A5b0OdD8m9uExEoSaElHuIZNg.LNTrevc6mK",
+        "role": "Customer"
+    },
+    {
+        "name": "Micheal Eshun",
+        "username": "michealeshun",
+        "email": "michealeshun@gmail.com",
+        "password": "$2b$12$42hLVHL9JoOW.lI9tGHsEehO.ZTFuEJgCr17l1vUwyL1P1ZBIf03i",
+        "role": "Customer"
+    }
 ]

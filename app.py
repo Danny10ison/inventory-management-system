@@ -4,8 +4,7 @@
 
 from login_user import login
 from product import add_product, view_products, view_single_product
-from request import request_for_a_product, approve_or_decline_a_request
-import getpass
+from request import request_for_a_product, approve_or_decline_a_request, view_requests
 
 display_message = """
 Welcome to Inventory Management Application
@@ -14,7 +13,7 @@ By: Serverless Sorcerers
 print(display_message)
 
 
-def manager_menu():
+def manager_menu(logged_in_user):
     """fucntion to display manager menu
     """
     while True:
@@ -46,8 +45,7 @@ def manager_menu():
             print("Viewing an item...")
             view_single_product()
         elif choice == '4':
-            # Remove Item
-            print("Removing an item...")
+            view_requests(logged_in_user)
         elif choice == '5':
             # Remove Item
             print("Removing an item...")
@@ -70,7 +68,8 @@ def customer_menu(logged_in_user):
         1. View Inventory (display all available items)
         2. View a single item/product
         3. Request an item/product
-        4. Exit (close the app)
+        4. View your requests
+        5. Exit (close the app)
         """
         print(customer_options)
 
@@ -89,8 +88,7 @@ def customer_menu(logged_in_user):
             print("Adding an item...")
             request_for_a_product(logged_in_user)
         elif choice == '4':
-            # Remove Item
-            print("Removing an item...")
+            view_requests(logged_in_user)
         elif choice == '5':
             print("Exiting the application. Goodbye!")
             break
@@ -109,21 +107,17 @@ while True:
     choice = input("Enter your choice: ")
 
     if choice == '1':
-        username = input("Enter your username: ")
-        password = getpass.getpass("Enter your password: ")
-
-        logged_in_user = login(username, password)
+        logged_in_user = login()
         if logged_in_user:
             if logged_in_user['role'] == 'Manager':
                 print("Login successful. Welcome, {}! Your role is {}.".format(
                     logged_in_user['name'], logged_in_user['role']))
-                manager_menu()  # Call the manager's menu
+                manager_menu(logged_in_user)  # Call the manager's menu
 
             if logged_in_user['role'] == 'Customer':
                 print("Login successful. Welcome, {}! ".format(
                     logged_in_user['name']))
                 customer_menu(logged_in_user)  # Call the customer's menu
-
         else:
             print("Invalid username or password. Please try again.")
     elif choice == '0':

@@ -1,20 +1,38 @@
 [
-  {
-    "id": "req-80938",
-    "product": {
-      "sku": "prod-94649",
-      "name": "Belaquao",
-      "shelf_life": "2036-04-06",
-      "volume": "100ml",
-      "price": 1000.0
+    {
+        "id": "req-80938",
+        "product": {
+            "sku": "prod-94649",
+            "name": "Belaquao",
+            "shelf_life": "2036-04-06",
+            "volume": "100ml",
+            "price": 1000.0
+        },
+        "qty_requested": 200,
+        "status": "approved",
+        "customer": {
+            "name": "Priscilla",
+            "username": "priscilla",
+            "email": "priscilla@gmail.com",
+            "role": "Customer"
+        }
     },
-    "qty_requested": 200,
-    "status": "approved",
-    "customer": {
-      "name": "Priscilla",
-      "username": "priscilla",
-      "email": "priscilla@gmail.com",
-      "role": "Customer"
+    {
+        "id": "req-10424",
+        "product": {
+            "sku": "prod-72438",
+            "name": "Voltic",
+            "shelf_life": "2026-04-27",
+            "volume": "10ml",
+            "price": 800.0
+        },
+        "qty_requested": 2,
+        "status": "pending",
+        "customer": {
+            "name": "John Doe",
+            "username": "JDoe",
+            "email": "johndoe@gmail.com",
+            "role": "Customer"
+        }
     }
-  }
 ]

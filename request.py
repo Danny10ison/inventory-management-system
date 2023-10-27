@@ -91,3 +91,87 @@ def approve_or_decline_a_request():
         print("Request approved.")
     if request['status'] == 'declined':
         print("Request declined.")
+
+
+def view_requests(logged_in_user):
+    message = """
+        Below are the requests
+            
+        """
+    if Requests:
+        is_manager = logged_in_user['role'] == 'Manager'
+        is_customer = logged_in_user['role'] == 'Customer'
+        customer_username = logged_in_user['username']
+
+        def display_request(request):
+            print("Request ID:", request['id'])
+            print("Qty requested:", request['qty_requested'])
+            print("Status:", request['status'])
+            print("Product:", request['product']['name'])
+            print("Customer:", request['customer']['name'])
+            print()
+
+        view_options = """
+                View options:
+                1. Prending requests
+                2. Approved requests
+                3. Decline requests
+                4. All requests
+                5. Exist requests
+                """
+
+        print(view_options)
+
+        choice = int(input("Enter your option: "))
+
+        print(message)
+
+        found = False
+        for request in Requests:
+            while True:
+                if choice == 1:
+                    if is_manager and request['status'] == 'pending':
+                        display_request(request)
+                        found = True
+
+                    if is_customer and request['status'] == 'pending' and request['customer']['username'] == customer_username:
+                        display_request(request)
+                        found = True
+
+                elif choice == 2:
+                    if is_manager and request['status'] == 'approved':
+                        display_request(request)
+                        found = True
+
+                    if is_customer and request['status'] == 'approved' and request['customer']['username'] == customer_username:
+                        display_request(request)
+                        found = True
+
+                elif choice == 3:
+                    if is_manager and request['status'] == 'declined':
+                        display_request(request)
+                        found = True
+
+                    if is_customer and request['status'] == 'declined' and request['customer']['username'] == customer_username:
+                        display_request(request)
+                        found = True
+
+                elif choice == 4:
+                    if is_manager:
+                        display_request(request)
+                        found = True
+
+                    if is_customer and request['customer']['username'] == customer_username:
+                        display_request(request)
+                        found = True
+
+                elif choice == 5:
+                    print("Exiting requests")
+                    break
+                else:
+                    print("Invalid choice. Please enter a valid option (1-5).")
+
+        if not found:
+            print("No request found")
+    else:
+        print("No request found in the database.")
