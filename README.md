@@ -75,4 +75,39 @@ Customer can
 - view all transactions (optional)
 - back to Page 1 or
 - exit app directly / log out
-	
+
+
+## Usage 
+
+###  Ubuntu 22.04
+
+1. Open your terminal
+
+2. Change your current directory (folder) to the "Desktop" folder.
+   ```bash
+   cd Desktop
+   ```
+
+3. Clone the project
+   ```bash
+   git clone https://github.com/Danny10ison/inventory-management-system.git
+   ```
+   This line clones a Git repository from GitHub. It creates a copy of the "inventory-management-system" repository from the specified URL and stores it on your local machine.
+
+4. After cloning the repository, change your current directory to the project repository
+   ```bash
+   cd inventory-management-system/
+   ```
+
+5. Open the project within Visual Studio code. It allows you to start working on the code within the repository.
+   ```bash
+   code .
+   ```
+6. Launch your VSCode terminal
+
+7. Run the script associated with the inventory management system
+   ```bash
+   python3 app.py
+   ```
+
+> Ubuntu 22.04 Usage guide by: Azumah Joshua :sunglasses:
